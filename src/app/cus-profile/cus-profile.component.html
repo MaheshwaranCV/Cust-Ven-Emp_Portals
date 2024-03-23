@@ -1,0 +1,99 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+<div class="header">
+  <br>
+  <img src="/assets/KAAR.png" class="logo" alt="Logo" (click)="openNavigationConfirmationDialog()" title="Home">
+  <h1 style="text-align: center;">CUSTOMER PROFILE VIEW</h1>
+  <br>
+  <div class="scrollit">
+
+    <style>
+      button {
+        display: inline-block;
+        padding: 10px 20px;
+        color: #fefefe;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      div {
+        margin-bottom: 20px;
+      }
+    </style>
+    <div>
+      <!-- <button class="hover-button" style="display: inline-block; margin-left: 10px;"
+        routerLink="/dashboard" title="Back">BACK</button> -->
+      <button class="hover-button" style="display: inline-block; margin-left: 10px;" routerLink="/dashboard"
+        title="Back">
+        <i class="fas fa-arrow-left"></i> <!-- Back icon -->
+      </button>
+
+      <!-- <button class="hover-button" style="display: inline-block; margin-left: 1335px;"
+        routerLink="/login" title="Logout">LOGOUT</button> -->
+      <!-- <button class="hover-button" style="display: inline-block; margin-left: 1406px;" routerLink="/login"
+        title="Logout">
+        <i class="fas fa-sign-out-alt"></i>
+      </button> -->
+
+      <button class="hover-button" style="display: inline-block; margin-left: 1392px;" (click)="openLogoutDialog()" title="Logout">
+        <i class="fas fa-sign-out-alt"></i> <!-- Logout icon -->
+      </button>
+
+      <button class="print-button" (click)="printPage()" title="Print"
+        style="display: inline-block; margin-left: -145px;"><span class="print-icon"></span></button>
+      <div class="loader" *ngIf="loading" style="display: inline-block; margin-left: -685px;"></div>
+    </div>
+
+    <div class="main">
+      <div class="card">
+        <div class="card-body">
+          <table>
+            <tbody>
+              <tr>
+                <td><b>CUSTOMER NAME</b></td>
+                <td>:</td>
+                <td>{{Profiles.NAME1._text}}</td>
+              </tr>
+              <tr>
+                <td><b>CUSTOMER ID</b></td>
+                <td>:</td>
+                <td>{{ formatNum(Profiles.KUNNR._text) }}</td>
+              </tr>
+              <tr>
+                <td><b>CITY</b></td>
+                <td>:</td>
+                <td>{{Profiles.ORT01._text}}</td>
+              </tr>
+              <tr>
+                <td><b>REGION</b></td>
+                <td>:</td>
+                <td>{{Profiles.REGIO._text}}</td>
+              </tr>
+              <tr>
+                <td><b>PIN CODE</b></td>
+                <td>:</td>
+                <td>{{Profiles.PSTLZ._text}}</td>
+              </tr>
+              <tr>
+                <td><b>COUNTRY</b></td>
+                <td>:</td>
+                <td>India</td>
+              </tr>
+              <tr>
+                <td><b>ADDRESS</b></td>
+                <td>:</td>
+                <td>{{Profiles.STRAS._text}}</td>
+              </tr>
+              <tr>
+                <td><b>NUMBER</b></td>
+                <td>:</td>
+                <td>123456789</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

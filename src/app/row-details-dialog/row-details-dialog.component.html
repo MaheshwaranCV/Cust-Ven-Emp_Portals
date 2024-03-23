@@ -1,0 +1,13 @@
+<mat-card class="mat-card custom-card">
+  <mat-card-content class="mat-card-content">
+    <div *ngFor="let row of rowData">
+      <div class="row">
+        <div class="field">{{ fieldNamesMap[row.field] || row.field }}&nbsp;:&nbsp;</div>
+        <div class="value">{{ row.value }}</div>
+      </div>
+    </div>
+  </mat-card-content>
+  <mat-dialog-actions>
+    <button class="mat-dialog-actions" mat-button [mat-dialog-close]="true">Close</button>
+  </mat-dialog-actions>
+</mat-card>

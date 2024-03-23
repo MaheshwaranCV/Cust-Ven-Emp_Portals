@@ -1,0 +1,54 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+<Body>
+    <br>
+    <button class="hover-button" style="display: inline-block; margin-left: 20px;" routerLink="/dashboard" title="Back">
+        <i class="fas fa-arrow-left"></i>
+    </button>
+
+    <button class="hover-button" style="display: inline-block; margin-left: 1380px;" (click)="openLogoutDialog()" title="Logout">
+        <i class="fas fa-sign-out-alt"></i>
+    </button>
+
+    <div class="container">
+        <mat-card class="card" (click)="INVOICE_DETAILS()" title="Invoice Details">
+            <img src="/assets/14789 - Copy.jpg" alt="Image 1" class="card-image">
+            <div class="card-content">
+                <h4 style="text-align: center;">INVOICE<br>DETAILS</h4>
+                <p style="text-align: justify;">Effortlessly review and manage your invoice details, ensuring accuracy,
+                    transparency, and seamless financial transactions for your business. <i>To know more details click
+                        here</i></p>
+            </div>
+        </mat-card>
+
+        <mat-card class="card" (click)="PAYMENTS_AND_AGING()" title="Payments and Aging">
+            <img src="/assets/36987.jpg" alt="Image 2" class="card-image">
+            <div class="card-content">
+                <h4 style="text-align: center;">PAYMENTS<br>AND AGING</h4>
+                <p style="text-align: justify;">Track payments and aging with ease, gaining visibility into outstanding
+                    balances and ensuring efficient financial management for your business. <i>To know more details
+                        click here</i></p>
+            </div>
+        </mat-card>
+
+        <mat-card class="card" (click)="CREDIT_DEBIT_MEMO()" title="Credit/Debit Memo">
+            <img src="/assets/20943668.jpg" alt="Image 3" class="card-image">
+            <div class="card-content">
+                <h4 style="text-align: center;">CREDIT/DEBIT<br>MEMO</h4>
+                <p style="text-align: justify;">Manage credit and debit memos effortlessly, facilitating smooth
+                    financial transactions and ensuring accurate documentation for improved customer satisfaction. <i>To
+                        know more details click here</i></p>
+            </div>
+        </mat-card>
+
+        <mat-card class="card" (click)="OVERALL_SALES_DATA()" title="Overall Sales Data">
+            <img src="/assets/4020769.jpg" alt="Image 3" class="card-image">
+            <div class="card-content">
+                <h4 style="text-align: center;">OVERALL<br>SALES DATA</h4>
+                <p style="text-align: justify;">Gain valuable insights into your overall sales data, empowering you to
+                    make informed decisions, identify trends, and drive business growth. <i>To know more details click
+                        here</i></p>
+            </div>
+        </mat-card>
+    </div>
+</Body>

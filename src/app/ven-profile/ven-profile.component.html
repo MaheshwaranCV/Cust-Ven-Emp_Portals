@@ -1,0 +1,90 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+<div class="header">
+  <br>
+  <img src="/assets/KAAR.png" class="logo" alt="Logo" (click)="openNavigationConfirmationDialog()" title="Home">
+  <h1 style="text-align: center;">VENDOR PROFILE VIEW</h1>
+  <br>
+  <div class="scrollit">
+
+    <style>
+      button {
+        display: inline-block;
+        padding: 10px 20px;
+        color: #fefefe;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      div {
+        margin-bottom: 20px;
+      }
+    </style>
+    <div>
+      <button class="hover-button" style="display: inline-block; margin-left: 10px;" routerLink="/vp-dashboard"
+        title="Back">
+        <i class="fas fa-arrow-left"></i>
+      </button>
+
+      <button class="hover-button" style="display: inline-block; margin-left: 1406px;" (click)="openLogoutDialog()" title="Logout">
+        <i class="fas fa-sign-out-alt"></i>
+      </button>
+
+      <button class="print-button" (click)="printPage()" title="Print"
+        style="display: inline-block; margin-left: -145px;"><span class="print-icon"></span></button>
+      <div class="loader" *ngIf="loading" style="display: inline-block; margin-left: -685px;"></div>
+    </div>
+
+    <div class="main">
+      <div class="card">
+        <div class="card-body">
+          <table>
+            <tbody>
+              <tr>
+                <td><b>VENDOR ID</b></td>
+                <td>:</td>
+                <td>{{ formatNum(Profile.VENDOR._text) }}</td>
+              </tr>
+              <tr>
+                <td><b>VENDOR NAME</b></td>
+                <td>:</td>
+                <td>{{Profile.NAME._text}}</td>
+              </tr>
+              <tr>
+                <td><b>ADDRESS</b></td>
+                <td>:</td>
+                <td>{{Profile.STREET._text}}</td>
+              </tr>
+              <tr>
+                <td><b>CITY</b></td>
+                <td>:</td>
+                <td>{{Profile.CITY._text}}</td>
+              </tr>
+              <tr>
+                <td><b>STATE</b></td>
+                <td>:</td>
+                <td>{{Profile.STATE._text}}</td>
+              </tr>
+              <tr>
+                <td><b>COUNTRY</b></td>
+                <td>:</td>
+                <td>{{Profile.COUNTRY._text}}</td>
+              </tr>
+              <tr>
+                <td><b>POSTAL CODE</b></td>
+                <td>:</td>
+                <td>{{Profile.POSTAL_CODE._text}}</td>
+              </tr>
+              <tr>
+                <td><b>NUMBER</b></td>
+                <td>:</td>
+                <td>1234567890</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

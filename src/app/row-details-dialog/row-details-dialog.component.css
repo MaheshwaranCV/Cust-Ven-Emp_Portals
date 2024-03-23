@@ -1,0 +1,48 @@
+.mat-card.custom-card {
+  background:  #fff;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  margin: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(221, 7, 7, 0.1);
+  overflow: hidden;
+}
+
+.mat-card-content {
+  padding: 24px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.field {
+  font-weight: 600;
+  margin-right: 12px;
+  color: #555;
+  min-width: 120px;
+}
+
+.value {
+  text-align: right;
+  flex-grow: 1;
+}
+
+.mat-dialog-actions {
+  background-color: white;
+  color:Black;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  margin-left:auto;
+}
+
+.mat-dialog-actions:hover {
+  color:  red;
+  background-color:white;
+}

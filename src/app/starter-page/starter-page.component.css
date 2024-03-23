@@ -1,0 +1,15 @@
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .fa-button {
+    background-color: #ddd;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+  }
+  

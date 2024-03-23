@@ -1,0 +1,108 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<br>
+<div class="header">
+  <br>
+  <img src="/assets/KAAR.png" class="logo" alt="Logo" (click)="openNavigationConfirmationDialog()" title="Home">
+  <h1 style="text-align: center;">INVOICE DETAILS</h1>
+  <br>
+  <div class="scrollit">
+    <style>
+      button {
+        display: inline-block;
+        padding: 10px 20px;
+        color: #fefefe;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      div {
+        margin-bottom: 20px;
+      }
+    </style>
+    <div>
+      <button class="hover-button" style="display: inline-block; margin-left: 10px;" routerLink="/fin-details"
+        title="Back">
+        <i class="fas fa-arrow-left"></i>
+      </button>
+
+      <button class="hover-button" style="display: inline-block; margin-left: 1392px;" (click)="openLogoutDialog()" title="Logout">
+        <i class="fas fa-sign-out-alt"></i>
+      </button>
+
+      <a style="display: inline-block; margin-left: -1432px;" (click)="download_inv()"
+        title="Download PDF"><span>Download</span><span>PDF</span></a>
+
+      <button class="print-button" (click)="printPage()" title="Print"
+        style="display: inline-block; margin-left: 10px;"><span class="print-icon"></span></button>
+
+      <div class="loader" *ngIf="isloading" style="display: inline-block; margin-left: 510px;"></div>
+
+      <button (click)="printyPage()" *ngIf="showButtons" title="Print Invoice"
+        style="display: inline-block; margin-left: 1050px; background-color: #ECECEC;">
+        <i class='fa fa-file-pdf-o' style='color: red; margin-right: 5px;'></i>
+        <i class='fa fa-print' style='color: red;'></i>
+      </button>
+      <button (click)="sendEmail()" *ngIf="showButtons" title="Mail Invoice"
+        style="display: inline-block; margin-left: 10px; background-color: #ECECEC;">
+        <i class='fa fa-envelope-o' style='color: red;'></i></button>
+    </div>
+    <div class="container">
+      <div class="content">
+        <p><strong>NUMBER OF INVOICES :</strong> {{ arrayLength }}</p>
+        <div class="search-container">
+          <input type="text" [(ngModel)]="searchText" placeholder="Search...">
+          <span class="clear-icon" (click)="clearSearch()"><i class="fas fa-times"></i></span>
+          <button class="footer-button" (click)="footerButtonClick()">LEARN MORE</button>
+        </div>
+        <table class="table table-striped">
+          <style>
+            table,
+            th {
+              user-select: none;
+            }
+
+            td {
+              border: 1px solid black;
+              user-select: text;
+            }
+          </style>
+          <thead style="background-color:#D21404;color: #fefefe;">
+            <tr>
+              <th (click)="sortColumn('KUNRG')">CUSTOMER NUMBER <span [ngClass]="getSortIcon('KUNRG')"></span></th>
+              <th (click)="sortColumn('VBELN')">INVOICE NUMBER <span [ngClass]="getSortIcon('VBELN')"></span></th>
+              <th (click)="sortColumn('FKART')">DOCUMENT CATEGORY <span [ngClass]="getSortIcon('FKART')"></span></th>
+              <th (click)="sortColumn('FKTYP')">ACCOUNT TYPE <span [ngClass]="getSortIcon('FKTYP')"></span></th>
+              <th (click)="sortColumn('VKORG')">SALES ORGANIZATION <span [ngClass]="getSortIcon('VKORG')"></span></th>
+              <th (click)="sortColumn('FKDAT')">DOCUMENT DATE <span [ngClass]="getSortIcon('FKDAT')"></span></th>
+              <th (click)="sortColumn('VBTYP')">SALES DOCUMENT TYPE <span [ngClass]="getSortIcon('VBTYP')"></span></th>
+              <th (click)="sortColumn('LAND1')">COUNTRY CODE <span [ngClass]="getSortIcon('LAND1')"></span></th>
+              <th (click)="sortColumn('ERDAT')">RECORD CREATED <span [ngClass]="getSortIcon('ERDAT')"></span></th>
+              <th (click)="sortColumn('NETWR')">AMOUNT <span [ngClass]="getSortIcon('NETWR')"></span></th>
+              <th (click)="sortColumn('WAERK')">CURRENCY <span [ngClass]="getSortIcon('WAERK')"></span></th>
+              <th (click)="sortColumn('ZTERM')">PAYMENT TERMS <span [ngClass]="getSortIcon('ZTERM')"></span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let Invoice of filterData()" (click)="openRowDetailsDialog(Invoice)">
+              <td>{{ formatNum(Invoice.KUNRG._text) }}</td>
+              <td>{{ formatNum(Invoice.VBELN._text) }}</td>
+              <td>{{Invoice.FKART._text}}</td>
+              <td>{{Invoice.FKTYP._text}}</td>
+              <td>{{Invoice.VKORG._text}}</td>
+              <td>{{ formatDate(Invoice.FKDAT._text) }}</td>
+              <td>{{Invoice.VBTYP._text}}</td>
+              <td>{{Invoice.LAND1._text}}</td>
+              <td>{{ formatDate(Invoice.ERDAT._text) }}</td>
+              <td>{{Invoice.NETWR._text}}</td>
+              <td>{{Invoice.WAERK._text}}</td>
+              <td>{{Invoice.ZTERM._text}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

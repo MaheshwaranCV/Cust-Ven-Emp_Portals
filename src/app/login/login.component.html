@@ -1,0 +1,29 @@
+<body>
+  <div class="content">
+    <form [formGroup]="form" #loginform="ngForm">
+      <img alt="user-icon" src="./assets/icon.png" style="display: block;margin: 0 auto;height: 75px;width: 75px;">
+      <br>
+      <h1 style="text-align: center;font-size: xx-large;color: darkgreen"><b>WELCOME TO CUSTOMER PORTAL</b></h1>
+      <div>
+        <label for="username" class="form">User Name</label>
+        <input formControlName="username" class="form-control" placeholder="Enter username">
+        <span class="text-danger" *ngIf="(loginData.username.touched) && loginData.username.errors?.required">
+          UserName is required
+        </span>
+      </div>
+      <br>
+      <div>
+        <label class="form" for="password">Password</label>
+        <input matInput [type]="showPassword ? 'text' : 'password'" formControlName="password" class="form-control" placeholder="Enter password">
+        <span class="eye"><mat-icon matSuffix (click)="togglePasswordVisibility()">{{showPassword?'visibility_off':'visibility'}}</mat-icon></span>
+        <span class="text-danger" *ngIf="(loginData.password.touched) && loginData.password.errors?.required">Password is required</span>
+      </div>
+      <div>
+        <button type="button" class="login-button" style="font-weight: bolder;margin-top: 35px;" (click)="Onsubmit()" [disabled]="!loginform.form.valid || isLoading">LOGIN</button>
+        <button type="button" class="login-button1" style="font-weight: bolder;margin-top: 7px;" routerLink="/starter-page">HOME</button>
+      </div>
+      <div *ngIf="isLoading" class="loader">
+      </div>
+    </form>
+  </div>
+</body>

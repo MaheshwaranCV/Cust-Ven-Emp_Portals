@@ -1,0 +1,86 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+
+<br>
+<div class="header">
+  <img src="/assets/KAAR.png" class="logo" alt="Logo" (click)="openNavigationConfirmationDialog()" title="Home">
+  <h1 style="text-align: center;">LEAVE DATA</h1>
+  <br>
+  <div class="scrollit">
+    <style>
+      button {
+        display: inline-block;
+        padding: 10px 20px;
+        color: #fefefe;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      div {
+        margin-bottom: 20px;
+      }
+    </style>
+    <div>
+      <button class="hover-button" style="display: inline-block; margin-left: 10px;" routerLink="/ep-dashboard"
+        title="Back">
+        <i class="fas fa-arrow-left"></i>
+      </button>
+      <button class="hover-button" style="display: inline-block; margin-left: 1392px;" (click)="openLogoutDialog()" title="Logout">
+        <i class="fas fa-sign-out-alt"></i>
+      </button>
+
+      <button class="print-button" (click)="printPage()" title="Print"
+        style="display: inline-block; margin-left: -145px;"><span class="print-icon"></span></button>
+      <div class="loader" *ngIf="loading" style="display: inline-block; margin-left: -672px;"></div>
+    </div>
+    <div class="container">
+      <div class="content">
+        <p><strong>NUMBER OF LEAVES :</strong> {{ arrayLength }}</p>
+        <div class="search-container">
+          <input type="text" [(ngModel)]="searchText" placeholder="Search...">
+          <span class="clear-icon" (click)="clearSearch()"><i class="fas fa-times"></i></span>
+          <button class="footer-button" (click)="footerButtonClick()">LEARN MORE</button>
+        </div>
+        <table class="table table-striped">
+          <style>
+            table,
+            th {
+              user-select: none;
+            }
+
+            td {
+              border: 1px solid black;
+              user-select: text;
+            }
+          </style>
+          <thead style="background-color:#D21404;color: #fefefe;">
+            <tr>
+              <th (click)="sortColumn('EMPLOYEENO')">PERSONNEL NUMBER <span
+                  [ngClass]="getSortIcon('EMPLOYEENO')"></span></th>
+              <th (click)="sortColumn('VALIDBEGIN')">VALID BEGINNING <span [ngClass]="getSortIcon('VALIDBEGIN')"></span>
+              </th>
+              <th (click)="sortColumn('VALIDEND')">VALID ENDING <span [ngClass]="getSortIcon('VALIDEND')"></span></th>
+              <th (click)="sortColumn('NAMEOFABSENCETYPE')">ABSENCE TYPE <span
+                  [ngClass]="getSortIcon('NAMEOFABSENCETYPE')"></span></th>
+              <th (click)="sortColumn('ABSENCEDAYS')">ABSENCE DAYS <span [ngClass]="getSortIcon('ABSENCEDAYS')"></span>
+              </th>
+              <th (click)="sortColumn('ABSENCEHOURS')">ABSENCE HOURS <span
+                  [ngClass]="getSortIcon('ABSENCEHOURS')"></span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let Leave of filterData()" (click)="openRowDetailsDialog(Leave)">
+              <td>{{ formatNum(Leave.EMPLOYEENO._text) }}</td>
+              <td>{{ formatDate(Leave.VALIDBEGIN._text) }}</td>
+              <td>{{ formatDate(Leave.VALIDEND._text) }}</td>
+              <td>{{ Leave.NAMEOFABSENCETYPE._text }}</td>
+              <td>{{ Leave.ABSENCEDAYS._text }}</td>
+              <td>{{ Leave.ABSENCEHOURS._text }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

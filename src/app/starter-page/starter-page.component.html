@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>W3.CSS Template</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+  <div class="w3-top">
+    <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+      <a href="#home" class="w3-bar-item w3-button"><b>KAAR</b> Technologies</a>
+      <div class="w3-right w3-hide-small">
+        <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">About</a>
+        <a href="#portals" class="w3-bar-item w3-button">Portals</a>
+        <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+      </div>
+    </div>
+  </div>
+
+  <header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
+    <img class="w3-image" src="/assets/KAAR Bg.jpg" alt="Architecture" width="1500" height="800">
+    <div class="w3-display-middle w3-margin-top w3-center">
+
+    </div>
+  </header>
+
+  <div class="w3-content w3-padding" style="max-width:1564px">
+
+    <div class="w3-container w3-padding-32" id="about">
+      <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">About</h3>
+      <h5>Founded by a group of 4 Entrepreneurs and friends,</h5>
+      <p><b>Maran N, Selvakumar M, Ratnakumar N and George Gaurdian</b>; Kaar Tech began its journey as a pureplay SAP
+        expertise in the year 2005. Since then, we have come a long way helping businesses grow exponentially in the era
+        of digital ubiquity!
+      </p>
+      <h5>What's in a name?</h5>
+      <p>A name as powerful as the transformation we bring !
+        'Kaar' means 'Rain' and is derived from the word 'Kaar Megham' (Rain Cloud) - which portrays the dense life
+        sustaining monsoon clouds that descend as millions of immaculate raindrops which in turn nurture nature's
+        bounty. This name represents how thousands of Digital Transformation Experts like
+        Raindrops descend from the Rain Cloud that is Kaar Tech to nurture business transformation, growth, and
+        profitability for enterprises of all sizes in North America, Europe, and the Middle East.
+      </p>
+      <h5>Global Presence</h5>
+      <p>Our established network of offices, partners, and distributors in key markets around the world ensure to provide the best for our customers across the globe.<br><br>
+        15+ Global Locations<br>
+        5000+ Man Years of SAP Experience<br>
+        1000+ SAP Consultants<br>
+        350+ Global customers<br>
+        10+ Business Awards<br>
+        2500+ SAP Projects<br>
+        25+ SAP Awards<br>
+        ...<br>
+        <a href="https://www.kaartech.com/" target="_blank" >Read More</a></p>
+    </div>
+
+    <div class="w3-container w3-row-padding w3-padding-32" id="portals">
+      <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Portals</h3>
+    </div>
+
+    <div class="w3-row-padding w3-grayscale">
+      <div class="w3-col l4 m6 w3-margin-bottom w3-border w3-hover-shadow">
+        <img src="/assets/Cus Portal.png" alt="Cus Portal" width="475" height="180">
+        <h3>Customer Portal</h3>
+        <p>The objective of the customer portal is to understand the functionalities of Sales and Distribution and
+          Finance module. This portal is to be designed for maintaining the data of all the customers carrying out
+          business with the organization. The need of Customer portal is to access and view the complete transaction
+          between the company and customer.</p>
+        <p class="w3-theme-l5 w3-padding-24">
+          <button (click)="CP()" class="w3-button w3-teal w3-block">Login <i class="fa fa-sign-in"></i></button>
+        </p>
+      </div>
+      <div class="w3-col l4 m6 w3-margin-bottom w3-border w3-hover-shadow">
+        <img src="/assets/Ven Portal.png" alt="Jane" width="475" height="180">
+        <h3>Vendor Portal</h3>
+        <p>The objective of the vendor portal is to understand the functionalities of Material Management (MM) and
+          Finance (FI) module. This portal is to be designed for maintaining the data of all the vendors carrying out
+          business with the organization. The need of vendor portal is to access and view the complete transaction
+          between the company and vendor.</p>
+        <p class="w3-theme-l5 w3-padding-24">
+          <button (click)="VP()" class="w3-button w3-teal w3-block">Login <i class="fa fa-sign-in"></i></button>
+        </p>
+      </div>
+      <div class="w3-col l4 m6 w3-margin-bottom w3-border w3-hover-shadow">
+        <img src="/assets/bg-image-5.jpg" alt="Mike" width="475" height="180">
+        <h3>Employee Portal</h3>
+        <p>The objective of the Employee portal is to understand the functionalities of HR and FI module. This portal is
+          to be designed for providing info about the organization and employees, getting the pay slip as printable,
+          leave balance and to request leave. The need of Employee portal is to have quick and easy access to
+          transactions and services.</p>
+        <p class="w3-theme-l5 w3-padding-24">
+          <button (click)="EP()" class="w3-button w3-teal w3-block">Login <i class="fa fa-sign-in"></i></button>
+        </p>
+      </div>
+    </div>
+
+    <div class="w3-container w3-padding-32" id="contact">
+      <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Contact</h3>
+      <p>Lets get in touch with us.</p>
+      <div style="margin-top:48px">
+        <a class="w3-button"
+          href="https://www.google.com/maps/place/Kaar+Technologies/@13.0477906,80.1964481,17z/data=!4m6!3m5!1s0x3a5266cf8734c4c9:0x36df7ffd784ace06!8m2!3d13.0474577!4d80.1986621!16s%2Fg%2F1tpb9djm"
+          target="_blank" title="India Location"><i class="fa fa-map-marker fa-fw w3-xxlarge "></i></a> HO: Chennai, India
+        <tr></tr>
+        <a class="w3-button" href="javascript:void(0)" title="Phone"><i class="fa fa-phone fa-fw w3-xxlarge"></i></a>
+        Phone: 044 4065 1500<tr></tr>
+        <a class="w3-button" href="https://www.kaartech.com/" target="_blank" title="Website"><i
+            class="fa fa-globe fa-fw w3-xxlarge"></i></a> Web: www.kaartech.com
+      </div>
+    </div>
+
+    <div class="w3-container">
+      <img src="/assets/KAAR Tech.jpg" class="w3-image" style="width:100%">
+    </div>
+  </div>
+
+  <footer class="w3-container w3-padding-32 w3-theme-d1 w3-center">
+    <a href="#home" class="w3-button w3-black w3-margin"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+    <h4>Follow Us</h4>
+    <div class="button-container">
+      <a class="w3-button w3-large w3-teal" href="https://www.facebook.com/kaartech" target="_blank" title="Facebook"><i
+          class="fa fa-facebook"></i></a>
+      <a class="w3-button w3-large w3-teal" href="https://twitter.com/kaartech" target="_blank" title="Twitter"><i
+          class="fa fa-twitter"></i></a>
+      <a class="w3-button w3-large w3-teal" href="https://www.instagram.com/kaar_tech/" target="_blank" title="Instagram"><i class="fa fa-instagram"></i></a>
+      <a class="w3-button w3-large w3-teal" href="https://www.youtube.com/@Kaartech" target="_blank" title="YouTube"><i
+          class="fa fa-youtube-play"></i></a>
+      <a class="w3-button w3-large w3-teal w3-hide-small" href="https://www.linkedin.com/company/kaar-tech/mycompany/"
+        target="_blank" title="Linkedin"><i class="fa fa-linkedin"></i></a>
+    </div>
+    <h6>Created by <b>MAHESHWARAN C V</b></h6>
+
+  </footer>
+
+</body>
+
+</html>

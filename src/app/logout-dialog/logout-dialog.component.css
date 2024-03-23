@@ -1,0 +1,41 @@
+.mat-dialog-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+  }
+  
+  .mat-dialog-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 16px;
+    color: #333;
+  }
+  
+  .mat-dialog-content {
+    font-size: 1.1rem;
+    margin-bottom: 24px;
+    color: #666;
+  }
+  
+  .mat-dialog-actions {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .mat-dialog-actions button:first-child {
+    margin-right: 16px;
+    background-color: #ccc;
+    color: #333;
+  }
+  
+  .mat-dialog-actions button:last-child {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  .mat-dialog-actions button:hover {
+    opacity: 0.8;
+  }
+  

@@ -1,0 +1,44 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+<Body>
+    <br>
+    <button class="hover-button" style="display: inline-block; margin-left: 20px;" routerLink="/dashboard" title="Back">
+        <i class="fas fa-arrow-left"></i>
+    </button>
+
+    <button class="hover-button" style="display: inline-block; margin-left: 1380px;" (click)="openLogoutDialog()" title="Logout">
+        <i class="fas fa-sign-out-alt"></i>
+    </button>
+
+    <div class="container">
+        <mat-card class="card" (click)="INQUIRY_DATA()" title="Inquiry Data">
+            <img src="/assets/3640950.jpg" alt="Image 1" class="card-image">
+            <div class="card-content">
+                <h4 style="text-align: center;">INQUIRY<br>DATA</h4>
+                <p style="text-align: justify;">Effortlessly retrieve and analyze detailed inquiry data, empowering you
+                    to gain valuable insights and improve customer satisfaction. <i>To know more details click here</i>
+                </p>
+            </div>
+        </mat-card>
+
+        <mat-card class="card" (click)="SALE_ORDER_DATA()" title="Sale Order Data">
+            <img src="/assets/19234.jpg" alt="Image 2" class="card-image">
+            <div class="card-content">
+                <h4 style="text-align: center;">SALE ORDER<br>DATA</h4>
+                <p style="text-align: justify;">Gain visibility into your sales order data, enabling you to streamline
+                    processes, track progress, and deliver exceptional customer service. <i>To know more details click
+                        here</i></p>
+            </div>
+        </mat-card>
+
+        <mat-card class="card" (click)="LIST_OF_DELIVERY()" title="List of Delivery">
+            <img src="/assets/19362.jpg" alt="Image 3" class="card-image">
+            <div class="card-content">
+                <h4 style="text-align: center;">LIST OF<br>DELIVERY</h4>
+                <p style="text-align: justify;">Effortlessly access a comprehensive list of deliveries, ensuring
+                    accurate tracking and timely fulfillment of orders for enhanced customer satisfaction. <i>To know
+                        more details click here</i></p>
+            </div>
+        </mat-card>
+    </div>
+</Body>

@@ -1,0 +1,10 @@
+<div class="dialog-container">
+  <h2 mat-dialog-title class="dialog-title">Confirm Navigation</h2>
+  <mat-dialog-content class="dialog-content">
+    <p>Are you sure you want to navigate to the Home Page?</p>
+  </mat-dialog-content>
+  <mat-dialog-actions class="dialog-actions">
+    <button mat-button color="primary" [mat-dialog-close]="false">Cancel</button>
+    <button mat-button color="warn" [mat-dialog-close]="true" cdkFocusInitial>Confirm</button>
+  </mat-dialog-actions>
+</div>

@@ -1,0 +1,46 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+<body>
+    <br>
+    <button class="hover-button" style="display: inline-block; margin-left: 20px;" routerLink="/vp-dashboard" title="Back">
+        <i class="fas fa-arrow-left"></i>
+    </button>
+
+    <button class="hover-button" style="display: inline-block; margin-left: 1380px;" (click)="openLogoutDialog()" title="Logout">
+        <i class="fas fa-sign-out-alt"></i>
+    </button>
+
+    <div class="container">
+        <mat-card class="card" (click)="VEN_INVOICE_DETAILS()" title="Invoice Details">
+            <img src="/assets/14789 - Copy.jpg" alt="Image 1" class="card-image">
+            <div class="card-content">
+                <h4 style="text-align: center;">INVOICE<br>DETAILS</h4>
+                <p style="text-align: justify;">Invoice Details provide comprehensive and concise information about
+                    invoice transactions, facilitating efficient tracking, reconciliation, and financial management.
+                    <i>To know more details click here</i></p>
+            </div>
+        </mat-card>
+
+        <mat-card class="card" (click)="VEN_PAYMENTS_AND_AGING()" title="Payments and Aging">
+            <img src="/assets/36987.jpg" alt="Image 2" class="card-image">
+            <div class="card-content">
+                <h4 style="text-align: center;">PAYMENTS AND<br>AGING</h4>
+                <p style="text-align: justify;">The Payments and Aging feature allows vendors to conveniently monitor
+                    their payment status and track the aging of invoices, ensuring transparency and effective cash flow
+                    management. <i>To know more details click
+                        here</i></p>
+            </div>
+        </mat-card>
+
+        <mat-card class="card" (click)="VEN_CREDIT_DEBIT_MEMO()" title="Credit/Debit Memo">
+            <img src="/assets/20943668.jpg" alt="Image 3" class="card-image">
+            <div class="card-content">
+                <h4 style="text-align: center;">CREDIT/DEBIT<br>MEMO</h4>
+                <p style="text-align: justify;">The Credit/Debit Memo functionality simplifies the process of issuing
+                    and managing credit or debit adjustments, streamlining vendor interactions and promoting accurate
+                    accounting and reconciliation. <i>To know more
+                        details click here</i></p>
+            </div>
+        </mat-card>
+    </div>
+</body>
